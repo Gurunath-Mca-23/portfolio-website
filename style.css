@@ -1,0 +1,139 @@
+
+/* Reset some default styles and set up a base font size */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* Style the navigation bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(51, 51, 70, 0.7);
+  overflow: hidden;
+  z-index: 100;
+  transition: opacity 0.3s ease;
+}
+
+/* Style the navigation links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  position: relative;
+  margin-bottom: 8px; /* Add space between text and underline */
+  transition: opacity 0.3s ease;
+}
+
+/* Add a class for the active link */
+.navbar a.active::before {
+  width: 100%;
+}
+
+
+/* Add an underline pseudo-element */
+.navbar a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--underline-color, transparent);
+  transition: width 0.3s ease;
+}
+
+
+/* Animate the underline on hover */
+.navbar a:hover::before {
+  width: 100%;
+  background-color: #4CAF50;
+}
+
+/* Add an underline animation on click */
+.navbar a:active::before {
+  width: 100%;
+}
+
+/* Style sections */
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+
+#resume, #projects, #skills, #contact {
+  
+  padding: 30px;
+}
+
+/* home section styling */
+#home {
+  background: url('background.jpg') center/cover no-repeat;
+  padding: 100px 0;
+}
+
+.home{
+  display: flex;
+  height: 100vh;
+  color: rgb(255, 255, 255);
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
+  
+}
+.home .max-width{
+width: 100%;
+display: flex;
+}
+.home .max-width .row{
+margin-right: 0;
+}
+.home .home-content .text-1{
+  font-size: 27px;
+}
+.home .home-content .text-2{
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+  color: rgb(0, 183, 255);
+}
+.home .home-content .text-3{
+  font-size: 40px;
+  margin: 5px 0;
+  position: absolute;
+  
+}
+.home .home-content .text-3 span{
+  color: rgb(115, 255, 0);
+  font-weight: 500;
+  position: relative;
+}
+.home .home-content a{
+  text-decoration: none;
+  border-radius: 50px;
+  position: relative;
+  top: 80%;
+}
+
+.home .home-content {
+  text-align: center; /* Center-align the button */
+}
+/* about section styling */
+
